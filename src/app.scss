@@ -4,7 +4,12 @@
   margin: 0;
 }
 body {
-    background: #1E2D3B;
+    background-color: #1E2D3B;
     color: grey;
     min-height: 100vh;
+}
+
+.container{
+  width: 970px;
+  margin: auto;
 }

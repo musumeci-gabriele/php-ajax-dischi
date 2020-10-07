@@ -1,4 +1,10 @@
 <?php
+include 'db.php';
+
+
+
+
+
 
 ?>
 
@@ -15,6 +21,7 @@
 
   <body>
 
+
     <!-- Locandine -->
     <div class="container">
 
@@ -27,7 +34,7 @@
                   <h2><?php echo $info["title"] ?></h2>
                   <h3><?php echo $info["author"] ?></h3>
                   <p><?php echo $info["year"] ?></p>
-                  <?php echo $info["poster"] ?>
+                  <img src="<?php echo $info["poster"] ?>" alt="poster">
                 </li>
 
               <?php endforeach; ?>
