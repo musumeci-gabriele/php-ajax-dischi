@@ -1,10 +1,4 @@
 <?php
-include 'db.php';
-
-
-
-
-
 
 ?>
 
