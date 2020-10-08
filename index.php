@@ -1,11 +1,6 @@
 <?php
 include 'db.php';
 
-
-
-
-
-
 ?>
 
 
@@ -13,36 +8,46 @@ include 'db.php';
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="dist/app.css">
     <title>Dischi in Php</title>
+    <link rel="stylesheet" href="dist/app.css">
   </head>
 
   <body>
+    <!-- topbar -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo">
+        </div>
+      </div>
+    </header>
+    <!-- // topbar-->
 
 
     <!-- Locandine -->
-    <div class="container">
+    <main>
 
-          <!-- lista di stampa -->
-          <ul>
+      <div class="container">
+        <div class="cds">
 
-              <?php foreach ($database as $info): ?>
+          <!-- lista di cd-->
+          <?php foreach ($database as $info): ?>
+            <div class="cd">
+              <div class="cd-poster">
+                <img src="<?php echo $info["poster"] ?>" alt="poster">
+              </div>
 
-                <li>
-                  <h2><?php echo $info["title"] ?></h2>
-                  <h3><?php echo $info["author"] ?></h3>
-                  <p><?php echo $info["year"] ?></p>
-                  <img src="<?php echo $info["poster"] ?>" alt="poster">
-                </li>
+              <h2 class="cd-title"><?php echo $info["title"] ?></h2>
+              <h3 class="cd-author"><?php echo $info["author"] ?></h3>
+              <p class="cd-year"><?php echo $info["year"] ?></p>
+            </div>
+          <?php endforeach; ?>
+          <!--// lista di cd -->
 
-              <?php endforeach; ?>
+        </div>
+      </div>
 
-          </ul>
-          <!--// lista di stampa -->
-
-    </div>
+    </main>
     <!--// Locandine -->
 
 

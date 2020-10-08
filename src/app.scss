@@ -1,15 +1,11 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-body {
-    background-color: #1E2D3B;
-    color: grey;
-    min-height: 100vh;
-}
-
-.container{
-  width: 970px;
-  margin: auto;
-}
+// Font url
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+// Setup
+@import "Partials/_variables.scss";
+@import "Partials/_mixins.scss";
+@import "Partials/_common.scss";
+// Partials
+@import "Partials/_header.scss";
+@import "Partials/_main.scss";
+@import "Partials/_cds.scss";

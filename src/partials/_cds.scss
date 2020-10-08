@@ -1,0 +1,30 @@
+.cds{
+  display: flex;
+  flex-wrap: wrap;
+
+  .cd{
+    background-color: $bgColorMainLight;
+    width: 25%;
+    margin: 20px 40px;
+    padding: 20px;
+    text-align: center;
+
+    &-poster{
+      img{
+        width: 100%;
+      }
+    }
+
+    &-title{
+      color: $titleColor;
+      font-size: 25px;
+      text-transform: uppercase;
+      margin: 15px 0;
+    }
+
+    &-author, &-year{
+      color: $textColor;
+      font-size: 18px;
+    }
+  }
+}
