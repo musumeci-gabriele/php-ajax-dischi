@@ -18,6 +18,10 @@ header {
   height: 80px;
   background: #2E3A46;
 }
+header .header-container {
+  display: flex;
+  justify-content: space-between;
+}
 header .logo {
   width: 60px;
 }

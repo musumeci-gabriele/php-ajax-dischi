@@ -1,9 +1,3 @@
-<?php
-include 'db.php';
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -16,9 +10,17 @@ include 'db.php';
     <!-- topbar -->
     <header>
       <div class="container">
-        <div class="logo">
-          <img src="img/logo.png" alt="logo">
+
+        <div class="header-container">
+          <div class="logo">
+            <img src="img/logo.png" alt="logo">
+          </div>
+
+          <select id="select" class="authors" name="authors">
+            <option value="All">All</option>
+          </select>
         </div>
+
       </div>
     </header>
     <!-- // topbar-->
@@ -26,30 +28,31 @@ include 'db.php';
 
     <!-- Locandine -->
     <main>
-
       <div class="container">
         <div class="cds">
-
-          <!-- lista di cd-->
-          <?php foreach ($database as $info): ?>
-            <div class="cd">
-              <div class="cd-poster">
-                <img src="<?php echo $info["poster"] ?>" alt="poster">
-              </div>
-
-              <h2 class="cd-title"><?php echo $info["title"] ?></h2>
-              <h3 class="cd-author"><?php echo $info["author"] ?></h3>
-              <p class="cd-year"><?php echo $info["year"] ?></p>
-            </div>
-          <?php endforeach; ?>
-          <!--// lista di cd -->
-
         </div>
       </div>
-
     </main>
     <!--// Locandine -->
 
+    <!-- Template Handlebars per i dischi-->
+    <script id="cd-template" type="text/x-handlebars-template">
+      <div class="cd">
+        <div class="cd-poster">
+          <img src="{{poster}}">
+        </div>
+        <h2 class="cd-title">{{title}}</h2>
+        <h3 class="cd-author">{{author}}</h3>
+        <p class="cd-year">{{year}}</p>
+      </div>
+    </script>
+    <!-- // template handlebars per i dischi-->
+
+    <!-- template per la ricerca degli autori -->
+    <script id="author-option-template" type="text/x-handlebars-template">
+        <option value="{{author}}">{{author}}</option>
+    </script>
+    <!--// template per la ricerca degli autori -->
 
     <script src="dist/app.js" charset="utf-8"></script>
   </body>
